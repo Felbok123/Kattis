@@ -1,8 +1,6 @@
 package safety;
 
 
-import engineering.Kattio;
-
 import java.util.Arrays;
 
 public class SafetyInNumbers {
@@ -15,10 +13,9 @@ public class SafetyInNumbers {
     private Kattio io = new Kattio(System.in, System.out);
 
     public static void main(String[] args) {
-        new SafetyInNumbers().getInput();
-
+        SafetyInNumbers sf = new SafetyInNumbers();
+        sf.getInput();
     }
-
 
     private void getInput() {
 
@@ -63,12 +60,15 @@ public class SafetyInNumbers {
                 result[n] = 0;
             }
         }
-        io.print("Case  #" + (in + 1) + ": ");
+        io.print("Case #" + (in + 1) + ": ");
         for (int i = 0; i < number; i++) {
-            String res = 100 * result[i] + "% ";
+            String res = 100 * result[i] + " ";
             io.print(res);
+
         }
         io.println();
     }
 
 }
+
+
